@@ -53,11 +53,11 @@ END pkg_utils;
 ## 5. Validation Package (Phase 05)
 The core of the project lies in the pkg_ck package. It provides functions to validate:
 
-`check_codfisc`: Validates the Italian fiscal code.
-`check_nome_cogn`: Validates names and surnames based on length and allowed characters.
-`is_valid_email`: Validates email formats.
-`is_valid_dob`: Ensures the date of birth is valid and within realistic limits.
-`is_valid_cell`: Validates the phone number format.
+- `check_codfisc`: Validates the Italian fiscal code.
+- `check_nome_cogn`: Validates names and surnames based on length and allowed characters.
+- `is_valid_email`: Validates email formats.
+- `is_valid_dob`: Ensures the date of birth is valid and within realistic limits.
+- `is_valid_cell`: Validates the phone number format.
 The `p_check` procedure orchestrates the validation process, checking each entry in t1. 
 Valid entries are moved to a new table (t1ok), while invalid ones are logged and moved to t1Bad with a summary of errors.
 ```sql
