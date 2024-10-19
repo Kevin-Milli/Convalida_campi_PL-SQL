@@ -72,17 +72,18 @@ END pkg_ck;
 ```
 
 ### How to Run
-Clone this repository to your local environment.
-Use Oracle SQLDeveloper to run the scripts in sequence from Phase 01 to Phase 05.
-Load the sample data into the t1 table.
-Execute the p_check procedure to start the validation process.
-Check the t1ok table for valid entries and the t1Bad table for invalid entries with error summaries.
-Logging
-All validation events, including errors, are logged in the t_log_event table using the pkg_utils.plog procedure. Each log includes:
+- Clone this repository to your local environment.
+- Use Oracle SQLDeveloper to run the scripts in sequence from Phase 01 to Phase 05.
+- Load the sample data into the t1 table.
+- Execute the p_check procedure to start the validation process.
+- Check the t1ok table for valid entries and the t1Bad table for invalid entries with error summaries.
 
-event_description: Description of the error or action.
-event_time: Timestamp of the event.
-event_type: Type of the event (e.g., validation, error).
+### Logging
+All validation events, including errors, are logged in the `t_log_event` table using the `pkg_utils.plog` procedure. Each log includes:
+
+- `event_description`: Description of the error or action.
+- `event_time`: Timestamp of the event.
+- `event_type`: Type of the event (e.g., validation, error).
 
 ## Future Enhancements
 - Add more complex validation rules (e.g., cross-field validation).
