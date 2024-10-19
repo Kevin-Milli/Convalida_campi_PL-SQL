@@ -1,7 +1,7 @@
 # Oracle SQLDeveloper Validation Project
 
 ## Overview
-This project demonstrates a data validation process implemented in Oracle SQLDeveloper. 
+This project demonstrates a data validation process implemented in Oracle SQLDeveloper.
 The project is divided into five phases and is designed to validate and categorize data based on a set of business rules. 
 The code includes user creation, table setup, data insertion, logging mechanisms, and stored procedures to validate data for errors.
 
@@ -17,10 +17,10 @@ GRANT dba, resource, connect TO ck;
 ## 2. DDL - Table Creation (Phase 02)
 This phase defines the structure of three main tables:
 
-`t1`: A table to store raw user data.
-`t1Bad`: A table to store invalid data entries from t1.
-`t_log_event`: A table to log validation events.
-`log_seq`: A sequence used for logging event IDs.
+- `t1`: A table to store raw user data.
+- `t1Bad`: A table to store invalid data entries from t1.
+- `t_log_event`: A table to log validation events.
+- `log_seq`: A sequence used for logging event IDs.
 ```sql
 CREATE TABLE t1 (codFisc, nome, cogn, mail, dataN, tel);
 CREATE TABLE t1Bad AS (SELECT * FROM t1);
